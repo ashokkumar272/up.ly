@@ -1,7 +1,5 @@
 import React from "react";
 import useAuthStore from "../store/AuthStore.js";
-// import { AppSidebar } from "../components/AppSidebar";
-import { AppSidebar } from "../components/AppSidebar2.jsx";
 import { SidebarProvider, SidebarInset, SidebarTrigger } from "../components/ui/sidebar";
 import {
   Breadcrumb,
@@ -43,12 +41,9 @@ function Dashboard() {
 
   return (
     <SidebarProvider>
-      <AppSidebar />
       <SidebarInset>
         <header className="flex items-center justify-between ">
           <div className="flex sticky top-0 bg-background h-16 shrink-0 items-center gap-2 border-b px-4">
-            <SidebarTrigger className="-ml-1" />
-            <Separator orientation="vertical" className="mr-2 h-4" />
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
