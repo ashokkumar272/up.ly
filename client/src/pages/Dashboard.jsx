@@ -47,7 +47,7 @@ function Dashboard() {
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="#">
+                  <BreadcrumbLink href="/">
                     Home
                   </BreadcrumbLink>
                 </BreadcrumbItem>
@@ -61,7 +61,7 @@ function Dashboard() {
           <div className="px-4 flex items-center gap-4">
             <Avatar className="cursor-pointer h-8 w-8">
               <AvatarImage src={auth?.currentUser?.photoURL} alt="@shadcn" />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarFallback>MT</AvatarFallback>
             </Avatar>
             <ToggleTheme />
           </div>
