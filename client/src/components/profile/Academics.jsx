@@ -22,8 +22,8 @@ const Academics = ({ onNext }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Academic details submitted:', formData);
-    // Move to next form
-    onNext();
+    // Move to next form and pass data
+    onNext(formData);
   };
 
   return (

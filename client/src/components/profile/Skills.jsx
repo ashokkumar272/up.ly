@@ -26,8 +26,8 @@ const Skills = ({ onNext }) => {
     // Filter out empty skills
     const filteredSkills = skills.filter(skill => skill.trim() !== '');
     console.log('Skills submitted:', filteredSkills);
-    // Move to next form
-    onNext();
+    // Move to next form and pass data
+    onNext(filteredSkills);
   };
 
   return (

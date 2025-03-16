@@ -21,8 +21,8 @@ const WorkExperience = ({ onNext }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Work experience submitted:', formData);
-    // Move to next form
-    onNext();
+    // Move to next form and pass data
+    onNext(formData);
   };
 
   return (

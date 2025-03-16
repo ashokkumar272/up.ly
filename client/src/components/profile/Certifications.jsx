@@ -21,8 +21,8 @@ const Certifications = ({ onNext }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Certification submitted:', formData);
-    // Move to next form
-    onNext();
+    // Submit the final form data
+    onNext(formData);
   };
 
   return (
@@ -125,7 +125,7 @@ const Certifications = ({ onNext }) => {
             type="submit"
             className="px-6 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
-            Next
+            Submit Profile
           </button>
         </div>
       </form>

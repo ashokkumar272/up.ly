@@ -27,8 +27,8 @@ const Projects = ({ onNext }) => {
       technologiesUsed: formData.technologiesUsed.split(',').map(tech => tech.trim())
     };
     console.log('Project details submitted:', formattedData);
-    // Move to next form
-    onNext();
+    // Move to next form and pass data
+    onNext(formattedData);
   };
 
   return (

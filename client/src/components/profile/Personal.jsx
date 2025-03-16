@@ -41,11 +41,12 @@ const Personal = ({ onNext }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', { ...formData, profileImage });
+    const personalData = { ...formData, profileImage };
+    console.log('Form submitted:', personalData);
     // Save the data or perform validations here
     
-    // Move to the next form
-    onNext();
+    // Move to the next form and pass the data
+    onNext(personalData);
   };
 
   return (
