@@ -1,10 +1,10 @@
 import React from 'react'
-
+import Dashboard from './pages/Dashboard'
 function App() {
   return (
     <div>
-      <h1 class="text-3xl font-bold underline">
-        Hello world!
+      <h1 className=''>
+        <Dashboard/>
       </h1>
     </div>
   )
