@@ -1,6 +1,34 @@
 import React, { useState } from 'react'
 
-const Projects = ({ onNext }) => {
+// FormSteps component imported from Dashboard
+const FormSteps = ({ currentStep }) => {
+  const steps = [
+    'Personal Info',
+    'Academics',
+    'Projects',
+    'Skills',
+    'Work Experience',
+    'Certifications',
+    'Complete'
+  ];
+
+  return (
+    <div className="mb-8">
+      <ul className="steps w-full">
+        {steps.map((step, index) => (
+          <li 
+            key={index} 
+            className={`step ${index <= currentStep ? 'step-primary' : ''}`}
+          >
+            {step}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+const Projects = ({ onNext, currentStep }) => {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -33,6 +61,7 @@ const Projects = ({ onNext }) => {
 
   return (
     <div className="bg-white shadow-md rounded-lg p-6 mb-6">
+      <FormSteps currentStep={currentStep} />
       <h2 className="text-2xl font-semibold text-gray-800 mb-6">Project Information</h2>
       
       <form onSubmit={handleSubmit}>

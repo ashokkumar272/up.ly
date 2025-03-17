@@ -8,8 +8,7 @@ import Skills from '../components/profile/Skills'
 import WorkExperience from '../components/profile/WorkExperience'
 import Certifications from '../components/profile/Certifications'
 
-// Final submission component
-const SubmitProfile = ({ profileData }) => {
+const SubmitProfile = ({ profileData, currentStep }) => {
   const handleSubmit = () => {
     // Here you would typically send the data to your backend
     console.log('Submitting complete profile data:', profileData);

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
-const Academics = ({ onNext }) => {
+// FormSteps component imported from Dashboar
+const Academics = ({ onNext, currentStep }) => {
   const [formData, setFormData] = useState({
     institution: '',
     degree: '',
@@ -28,6 +29,7 @@ const Academics = ({ onNext }) => {
 
   return (
     <div className="bg-white shadow-md rounded-lg p-6 mb-6">
+      <FormSteps currentStep={currentStep} />
       <h2 className="text-2xl font-semibold text-gray-800 mb-6">Academic Information</h2>
       
       <form onSubmit={handleSubmit}>
